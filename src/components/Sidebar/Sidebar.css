@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    background-color: white;
+    border-radius: 14px;
+}
+.icon{
+    margin-top: 5px;
+    margin-right: 5px;
+}

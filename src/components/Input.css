@@ -1,0 +1,10 @@
+.field{
+    display: inline-block;
+   float: right;
+    border: none;
+   height: 35px;
+   font-size: 18px;
+   padding: 15px;
+   /* border: 1px solid red; */
+   border-radius: 14px;
+}

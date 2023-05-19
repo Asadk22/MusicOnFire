@@ -1,0 +1,10 @@
+.Loader-main{
+    display: flex;
+    justify-content: center;
+}
+.Loader-container{      
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 310px;
+}

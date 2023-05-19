@@ -1,0 +1,84 @@
+.page-main-div {
+  display: flex;
+  /* flex-direction: row; */
+  /* height: 500%; */
+  /* border: 1px solid white; */
+}
+.Album-main {
+  margin-left: 4.5%;
+  margin-top: 4%;
+}
+.Albumimage {
+  /* border: 1px solid yellow; */
+  border-radius: 8px;
+}
+.Album-Container {
+  display: flex;
+  flex-direction: column;
+}
+.album-mid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 1px solid white; */
+  width: 30vw;
+}
+.song-Name {
+  font-size: 1.4vw;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.album-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 1vw;
+  /* border: 1px solid white; */
+  width: 20vw;
+  margin-top: 10px;
+}
+.second-container {
+  /* border: 1px solid red; */
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+  padding: 14px;
+  background-color: #ffffff;
+}
+.second-main {
+  /* padding: 5px; */
+  margin-top: 2.1%;
+  width: 100%;
+  max-height: 700px;
+  overflow-y: scroll;
+  /* border: 1px solid red; */
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.second-container:hover {
+  background-color: rgba(117, 117, 123, 0.2);
+  color: aliceblue;
+}
+.second-c-first {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-left: 10px;
+}
+.album-image {
+  /* border: 1px solid red; */
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.album-title {
+  margin-left: 10px;
+}
+.album-icon {
+  display: flex;
+  align-items: center;
+}
