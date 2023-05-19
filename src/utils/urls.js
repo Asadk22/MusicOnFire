@@ -1,5 +1,5 @@
 // BASE URL
-export const API_BASE_URL = "https://music-on-fire.vercel.app/";
+export const API_BASE_URL = "https://music-on-fire.vercel.app";
 
 // Full url
 export const getSongsUrl = (endpoint) => API_BASE_URL + endpoint;
