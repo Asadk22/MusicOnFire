@@ -7,14 +7,21 @@ import { newData } from "../AllData/Data";
 import { observer } from "mobx-react";
 import StoreSongs from "../../Store/MobxStore";
 import { toJS } from "mobx";
-import { useNavigate } from "react-router";
-import { playListData } from "../../utils/Service";
-import LoaderCom from "../Loader/LoaderCom";
 
 function SmallCards({ name, onClick, Righticon, Lefticon }) {
   const [icon, setIcon] = useState("");
 
-  const navigation = useNavigate();
+  useEffect(() => {
+    console.log(
+      "new album-->>>>",
+      toJS(StoreSongs?.AllData?.new_albums?.StoreSongs?.AllData?.new_albums)
+    );
+    // .more_info?.artistMap?.artists
+  }, []);
+
+  const abc = StoreSongs?.AllData?.new_albums;
+  {
+  }
 
   const showIcon = (index) => {
     if (icon === index) {
@@ -22,11 +29,6 @@ function SmallCards({ name, onClick, Righticon, Lefticon }) {
     } else {
       setIcon(index);
     }
-  };
-
-  const sendData = (res) => {
-    console.log("first", res);
-    navigation("/trendingInside", { state: { id: res.id } });
   };
 
   const breakPoints = [
@@ -41,18 +43,13 @@ function SmallCards({ name, onClick, Righticon, Lefticon }) {
         <p className="recently-played">{name}</p>
       </div>
       <Carousel breakPoints={breakPoints}>
-        {StoreSongs?.AllData?.top_playlists?.map((data, index) => {
+        {StoreSongs?.AllData?.new_albums?.map((data, index) => {
           // console.log("data small card-->>", data);
           return (
             <>
               <div className="carousel-card">
                 <div className="Carousel-image">
-                  <img
-                    src={data?.image}
-                    className="sub-Image"
-                    onClick={() => sendData(data)}
-                  />
-
+                  <img src={data?.image} className="sub-Image" />
                   <p className="Carousel-icon" onClick={() => showIcon(index)}>
                     {icon === index ? (
                       <AiIcons.AiFillPlayCircle size={50} />
@@ -63,6 +60,7 @@ function SmallCards({ name, onClick, Righticon, Lefticon }) {
                 </div>
                 <div className="Carousel-about">
                   <p className="Carousel-heading">{data?.title}</p>
+                  <p className="Carousel-title">{data?.subtitle}</p>
                   <p className="Carousel-title">{data?.type}</p>
                 </div>
               </div>

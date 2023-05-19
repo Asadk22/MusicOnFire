@@ -1,6 +1,7 @@
+import { toJS } from "mobx";
 import client from "../Interceptor/Index";
 import StoreSongs from "../Store/MobxStore";
-import { getAllSongs, allAlbums } from "./urls";
+import { getAllSongs, allAlbums, allPlaylist } from "./urls";
 
 // const param = useParams();
 export const AllSongs = async () => {
@@ -26,10 +27,31 @@ export const AllSongs = async () => {
 
 export const AlbumData = async (id) => {
   try {
+    StoreSongs.setLoader(true);
     return await client.get(`${allAlbums}${id}`).then((res) => {
-      console.log("response of album-->", JSON.stringify(res));
+      StoreSongs.setAlbum(res);
+      StoreSongs.setLoader(false);
+      // console.log(
+      //   "response of album-->",
+      //   toJS(StoreSongs?.album?.data?.data?.title)
+      // );
     });
   } catch (error) {
+    StoreSongs.setLoader(false);
     console.log("album error-->", error);
+  }
+};
+
+export const playListData = async (id) => {
+  try {
+    StoreSongs.setLoader(true);
+    return await client.get(`${allPlaylist}${id}`).then((res) => {
+      StoreSongs.setTrendingList(res);
+      StoreSongs.setLoader(false);
+      // console.log("response of allPlaylist-->", toJS(StoreSongs.trendingList));
+    });
+  } catch (error) {
+    StoreSongs.setLoader(false);
+    console.log("allPlaylist error-->", error);
   }
 };

@@ -1,0 +1,119 @@
+.carousel-card{
+    flex-direction: column;
+    /* border: 1px solid white; */
+    width: 260px; 
+    height: 320px;
+    background-color: #171719;
+    margin-top: 10%;
+    border-radius: 16px;
+  }
+  .Carousel-about{
+    /* background-color: aliceblue; */
+    text-align: center;
+    /* margin-top: 10px; */
+    padding: 10px 10px
+  }
+  .Carousel-image{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+  }
+  .Carousel-icon{
+    position: absolute;
+    top: 80px;
+    display: none;
+    color: aquamarine;
+    /* visibility: hidden; */
+  }
+  /* .Carousel-image .Carousel-icon:hover{
+    display: flex;
+    visibility: visible;
+  } */
+  .sub-Image{
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 25px;
+  }
+  .Carousel-image:hover .Carousel-icon{
+    display: block;
+  }
+  .Carousel-image:hover{
+    transform: scale(1.1);
+    transform-origin: 40% 40%;
+    transition: all 0.5s ease-in-out; 
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    /* rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  }
+  /* .sub-Image:hover{
+    transform: scale(1.1);
+    transform-origin: 40% 40%;
+    transition: all 0.5s ease-in-out; 
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;  
+  } */
+  .Carousel-heading{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0px 20px;
+    color: white
+  }
+  .Carousel-title{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 8px;
+    color: aquamarine;
+  }
+  .recently-container{
+    /* border: 1px solid white; */
+    padding: 0 5%;
+    margin-top: 4%;
+  }
+  .recently-played{
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .mainslider .cYPDJy {
+        box-sizing: border-box;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        font-size: 1.6em;
+        /* background-color: rgb(131 183 58); */
+        background-color: #454549;
+        color: #333;
+        box-shadow: 0 0 2px 0px #333;
+        border-radius: 50%; 
+        border: none;
+        /* padding: 10; */
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        line-height: 50px;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;  
+        align-self: center;
+        cursor: pointer;
+        outline: none;
+        /* border: 1px solid red; */
+        /* padding: 10px 10px; */
+    }
+    .mainslider .cYPDJy:hover:enabled {
+      color: #fff;
+      background-color: rgb(111, 105, 104);
+      box-shadow: 0 0 2px 0 #333;
+  }
+  .mainslider .cYPDJy:focus:enabled{
+    color: #fff;
+    background-color: rgb(197, 192, 192);
+    box-shadow: 0 0 2px 0 #333;
+  }
+  
+  

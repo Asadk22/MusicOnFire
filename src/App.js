@@ -7,6 +7,7 @@ import { Events, EventsOne, EventsTwo } from "./pages/Events";
 import Contact from "./pages/ContactUs";
 import Support from "./pages/Support";
 import AlbumSongs from "./components/AlbumScreen/AlbumSongs";
+import TrendingInsideCustom from "./components/TrendingInsideCustom/TrendingInsideCustom";
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/events/events2" element={<EventsTwo />} />
           <Route path="/support" element={<Support />} />
           <Route path="/albumSongs" element={<AlbumSongs />} />
+          <Route path="/trendingInside" element={<TrendingInsideCustom />} />
         </Routes>
       </Router>
     </>

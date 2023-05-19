@@ -12,10 +12,7 @@ function SongCard({ playIcon, pauseIcon }) {
   const [show, setShow] = useState("");
   const navigation = useNavigate();
 
-  // const { state } = useLocation;
-
   const sendData = (res) => {
-    // debugger;
     console.log("first", res);
     navigation("/albumSongs", { state: { id: res.id } });
   };
@@ -34,11 +31,7 @@ function SongCard({ playIcon, pauseIcon }) {
     { width: 768, itemsToShow: 3 },
     { width: 1200, itemsToShow: 5 },
   ];
-  // console.log(
 
-  //   "StoreSongs?.AllData?.new_trending?",
-  //   toJS(StoreSongs?.AllData?.new_trending)
-  // );
   return (
     <>
       <Carousel breakPoints={breakPoints} className="main-body">

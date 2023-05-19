@@ -8,6 +8,7 @@ import Loader from "../components/Loader/LoaderCom";
 import StoreSongs from "../Store/MobxStore";
 import { toJS } from "mobx";
 import { observer } from "mobx-react";
+import NewAlbum from "../components/NewAlbum/NewAlbum";
 
 const Home = () => {
   useEffect(() => {
@@ -29,19 +30,10 @@ const Home = () => {
             playIcon={<AiIcons.AiFillPlayCircle size={50} />}
             pauseIcon={<AiIcons.AiFillPauseCircle size={50} />}
           />
-          <SmallCards name={"Recently Played"} />
+          <SmallCards name={"Top Playlist's"} />
+          <NewAlbum name={"New Albums"} />
         </>
       )}
-      {/* <div className="home">New Releases</div>
-      <SongCard />
-      <SmallCards
-        name={"Recently Played"}
-        onclick={() => next()}
-        Righticon={
-          <AiIcons.AiOutlineArrowRight color="white" className="sub-arrow1" />
-        }
-        Lefticon={<AiIcons.AiOutlineArrowLeft className="sub-arrow1" />}
-      /> */}
 
       {/* <SmallCards
         name={"Trending Now"}

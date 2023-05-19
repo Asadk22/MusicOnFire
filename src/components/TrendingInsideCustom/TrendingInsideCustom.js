@@ -9,15 +9,18 @@ import * as AiIcons from "react-icons/ai";
 import { toJS } from "mobx";
 import Loader from "../Loader/LoaderCom";
 
-function AlbumSongs(props) {
+function TrendingInsideCustom(props) {
   const [songPlay, setSongPlay] = useState("");
   const [change, setChange] = useState("");
   const receive = useLocation();
 
   useEffect(() => {
-    AlbumData(receive.state.id);
+    playListData(receive.state.id);
     // console.log("state data-->", receive.state);
-    // console.log("storesongs-->>>>>>>", toJS(StoreSongs?.AllData?.new_trending));
+    // console.log(
+    //   "storesongs-->>>>>>>",
+    //   toJS(StoreSongs?.trendingList?.data?.data?.list)
+    // );
   }, [props]);
 
   const Play = (index) => {
@@ -27,6 +30,7 @@ function AlbumSongs(props) {
       setSongPlay(index);
     }
   };
+  // console.log("StoreSongs.loader", StoreSongs.loader);
 
   return (
     <>
@@ -55,7 +59,7 @@ function AlbumSongs(props) {
             </div>
           </div>
           <div className="second-main">
-            {StoreSongs?.album?.data?.data?.list?.map((res, index) => {
+            {StoreSongs?.trendingList?.data?.data?.list.map((res, index) => {
               return (
                 <>
                   <div
@@ -74,7 +78,7 @@ function AlbumSongs(props) {
                         />
                       </div>
                       <div className="album-title">{res?.title}</div>
-                      <div className="album-title">{res?.subtitle}</div>
+                      {/* <div className="album-title">{res?.subtitle}</div> */}
                     </div>
                     <div className="album-icon" onClick={() => Play(index)}>
                       {songPlay === index ? (
@@ -94,4 +98,4 @@ function AlbumSongs(props) {
   );
 }
 
-export default observer(AlbumSongs);
+export default observer(TrendingInsideCustom);
